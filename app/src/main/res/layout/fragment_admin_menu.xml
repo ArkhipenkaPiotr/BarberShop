@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/fragment_admin_menu_add"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorAccent"
+        android:layout_centerVertical="true"
+        android:text="@string/add_the_hairdresser"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/lightGray"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/fragment_admin_menu_users_list"
+        android:layout_below="@id/fragment_admin_menu_add"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorAccent"
+        android:text="@string/user_s_list"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/lightGray"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/fragment_admin_menu_service_list"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/fragment_admin_menu_users_list"
+        android:text="@string/service_list"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/lightGray" />
+
+    <Button
+        android:id="@+id/fragment_admin_menu_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/fragment_admin_menu_service_list"
+        android:text="@string/statistics"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/lightGray" />
+</RelativeLayout>

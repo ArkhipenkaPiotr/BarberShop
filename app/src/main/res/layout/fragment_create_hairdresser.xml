@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_centerVertical="true"
+        android:id="@+id/fragment_create_hairdresser_photo_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/photo_url"/>
+
+    <EditText
+        android:layout_below="@id/fragment_create_hairdresser_photo_url"
+        android:id="@+id/fragment_create_hairdresser_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/lastname"/>
+
+    <EditText
+        android:layout_below="@id/fragment_create_hairdresser_lastname"
+        android:id="@+id/fragment_create_hairdresser_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/firstname"/>
+
+    <EditText
+        android:layout_below="@id/fragment_create_hairdresser_firstname"
+        android:id="@+id/fragment_create_hairdresser_client_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:clickable="true"
+        android:hint="@string/client_gender"/>
+
+
+    <EditText
+        android:layout_below="@id/fragment_create_hairdresser_client_gender"
+        android:id="@+id/fragment_create_hairdresser_password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/password"/>
+
+    <Button
+        android:id="@+id/fragment_create_hairdresser_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_create_hairdresser_password"
+        android:text="@string/save_hairdresser"/>
+</RelativeLayout>

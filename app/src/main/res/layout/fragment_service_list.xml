@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/fragment_service_list_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id="@+id/fragment_service_name_text_view"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/lightGray"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:hint="@string/name"
+            android:textColorHint="@color/lightGray"/>
+
+        <EditText
+            android:id="@+id/fragment_service_price_text_view"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/fragment_service_name_text_view"
+            android:hint="@string/price"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_service_add_button"
+            android:background="@drawable/ic_add_circle_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_service_list_recycler_view"
+        android:layout_below="@id/fragment_service_list_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ProgressBar
+        android:id="@+id/fragment_service_list_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

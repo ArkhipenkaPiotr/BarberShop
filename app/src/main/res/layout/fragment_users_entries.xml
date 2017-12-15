@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fragment_users_entries_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/entries_of_user"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_margin="30dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_users_entries_recycler_view"
+        android:layout_below="@id/fragment_users_entries_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/fragment_users_entries_log_out"
+        android:text="@string/log_out"
+        android:layout_below="@id/fragment_users_entries_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

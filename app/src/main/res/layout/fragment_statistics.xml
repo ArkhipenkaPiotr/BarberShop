@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/fragment_statistics_desc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/number_of_orders_this_month"
+            android:gravity="center"
+            android:textSize="25sp"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_below="@id/fragment_statistics_desc1"
+            android:id="@+id/fragment_statistics_pie_char_1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <TextView
+            android:id="@+id/fragment_statistics_desc2"
+            android:layout_below="@id/fragment_statistics_pie_char_1"
+            android:layout_marginTop="30dp"
+            android:textSize="25sp"
+            android:text="@string/amount_earned_for_the_month"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/fragment_statistics_pie_char_2"
+            android:layout_below="@id/fragment_statistics_desc2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <ProgressBar
+            android:id="@+id/fragment_statistics_tool_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</ScrollView>

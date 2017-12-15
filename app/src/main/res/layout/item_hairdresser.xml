@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/colorAccent"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:id="@+id/item_hairdresser_image_view"
+        android:layout_width="130dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/item_hairdresser_last_name"
+        android:layout_toEndOf="@id/item_hairdresser_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="3dp"
+        tools:text="Фамилия"/>
+
+    <TextView
+        android:id="@+id/item_hairdresser_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_toEndOf="@id/item_hairdresser_image_view"
+        android:layout_below="@id/item_hairdresser_last_name"
+        android:textSize="25sp"
+        android:layout_margin="3dp"
+        tools:text="Имя"/>
+
+    <ImageView
+        android:id="@+id/item_hairdresser_man_image"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/item_hairdresser_image_view"
+        android:layout_below="@id/item_hairdresser_first_name"
+        android:src="@drawable/ic_man_white"
+        tools:text="Специальность"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/item_hairdresser_woman_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/item_hairdresser_man_image"
+        android:layout_below="@id/item_hairdresser_first_name"
+        android:src="@drawable/ic_woman_white"
+        tools:text="Специальность"/>
+
+
+</RelativeLayout>
