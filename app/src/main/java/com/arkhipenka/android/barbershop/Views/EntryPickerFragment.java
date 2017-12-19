@@ -105,7 +105,7 @@ public class EntryPickerFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Service>> call, Throwable t) {
-                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Ошибка", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -140,15 +140,15 @@ public class EntryPickerFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (!isDateCorrectly()){
-                    Toast.makeText(getContext(), "Check the date correctness", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Проверьте правильность введенной даты", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if (!isEntryNotExist()){
-                        Toast.makeText(getContext(), "This time is already taken", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Это время уже занято", Toast.LENGTH_SHORT).show();
                     }
                     else {
                         DateTimeZone zone = DateTimeZone.forID( "America/Montreal" );
-                        DateTime selectedDate = new DateTime(datePicker.getYear(),datePicker.getMonth(),datePicker.getDayOfMonth(),timePicker.getCurrentHour(),timePicker.getCurrentMinute(),zone);
+                        DateTime selectedDate = new DateTime(datePicker.getYear(),datePicker.getMonth()+1,datePicker.getDayOfMonth(),timePicker.getCurrentHour(),timePicker.getCurrentMinute(),zone);
 
                         Service service = services.get(spinner.getSelectedItemPosition());
                         Entry entry = new Entry(hairdresser,barberUser,selectedDate.toDate(),service);
@@ -156,12 +156,12 @@ public class EntryPickerFragment extends Fragment {
                             @Override
                             public void onResponse(Call<Entry> call, Response<Entry> response) {
                                 getFragmentManager().popBackStack();
-                                Toast.makeText(getContext(), "Good", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Запись добавлена", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
                             public void onFailure(Call<Entry> call, Throwable t) {
-                               Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(getContext(), "Ошибка", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }

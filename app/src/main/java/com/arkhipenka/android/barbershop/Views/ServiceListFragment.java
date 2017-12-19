@@ -75,7 +75,7 @@ public class ServiceListFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Service>> call, Throwable t) {
-                Toast.makeText(getContext(), "Fail", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Ошибка", Toast.LENGTH_SHORT).show();
             }
         });
         return v;
@@ -151,12 +151,12 @@ public class ServiceListFragment extends Fragment {
         App.getApi().refreshService(service).enqueue(new Callback<Service>() {
             @Override
             public void onResponse(Call<Service> call, Response<Service> response) {
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Сохранено", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<Service> call, Throwable t) {
-                Toast.makeText(getContext(), "not saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Не сохранено", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -165,12 +165,12 @@ public class ServiceListFragment extends Fragment {
         App.getApi().deleteService(service).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Toast.makeText(getContext(), "Deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Удалено", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                Toast.makeText(getContext(), "Not deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Не удалено", Toast.LENGTH_SHORT).show();
             }
         });
     }

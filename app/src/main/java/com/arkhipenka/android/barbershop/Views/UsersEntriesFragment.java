@@ -73,7 +73,7 @@ public class UsersEntriesFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Entry>> call, Throwable t) {
-                Toast.makeText(getContext(), "Error!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Ошибка!", Toast.LENGTH_SHORT).show();
             }
         });
         return v;

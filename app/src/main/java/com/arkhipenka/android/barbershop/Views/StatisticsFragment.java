@@ -123,7 +123,7 @@ public class StatisticsFragment extends Fragment {
             @Override
             public void onFailure(Call<List<Hairdresser>> call, Throwable t) {
                 progressBar.setVisibility(GONE);
-                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Ошибка", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -140,7 +140,7 @@ public class StatisticsFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Entry>> call, Throwable t) {
-                Toast.makeText(getContext(),"Fail",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Ошибка",Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(GONE);
             }
         });

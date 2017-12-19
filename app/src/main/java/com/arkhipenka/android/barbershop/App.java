@@ -29,7 +29,7 @@ public class App extends Application {
         Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://dd40e073.ngrok.io/")
+                .baseUrl("http://d755e098.ngrok.io/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

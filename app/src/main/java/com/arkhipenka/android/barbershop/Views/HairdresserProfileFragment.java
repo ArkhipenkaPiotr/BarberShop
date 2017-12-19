@@ -126,7 +126,7 @@ public class HairdresserProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (App.getAccessable()==null||App.getAccessable().getPermissions().equals(Accessable.TYPE_HAIRDRESSER)){
-                    Toast.makeText(getContext(), "Log in please", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Войдите в систему!", Toast.LENGTH_LONG).show();
                 }
                 else {
                     getFragmentManager().beginTransaction()
@@ -167,13 +167,13 @@ public class HairdresserProfileFragment extends Fragment {
         App.getApi().addHairdresser(hairdresser).enqueue(new Callback<Hairdresser>() {
             @Override
             public void onResponse(Call<Hairdresser> call, Response<Hairdresser> response) {
-                Toast.makeText(getContext(),"Changes completed", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Изменения сохранены", Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onFailure(Call<Hairdresser> call, Throwable t) {
-                Toast.makeText(getContext(),"Error", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Ошибка", Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             }
         });
@@ -251,7 +251,7 @@ public class HairdresserProfileFragment extends Fragment {
 
                 @Override
                 public void onFailure(Call<WorkingHours> call, Throwable t) {
-                    Toast.makeText(getContext(), "Working hours has not download ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Рабочие часы не загружены", Toast.LENGTH_LONG).show();
                 }
             });
         }
@@ -268,7 +268,7 @@ public class HairdresserProfileFragment extends Fragment {
 
                 @Override
                 public void onFailure(Call<List<Entry>> call, Throwable t) {
-                    Toast.makeText(getContext(), "Entry downloading has not succesful ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Записи к парикмахеру не были загружены ", Toast.LENGTH_LONG).show();
                 }
             });
         }
@@ -314,7 +314,7 @@ public class HairdresserProfileFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Hairdresser> call, Throwable t) {
-                Toast.makeText(getContext(), "Download error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Ошибка загрузки", Toast.LENGTH_SHORT).show();
             }
         });
     }

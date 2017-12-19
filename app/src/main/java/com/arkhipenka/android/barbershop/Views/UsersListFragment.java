@@ -131,12 +131,12 @@ public class UsersListFragment extends Fragment {
             App.getApi().saveUser(barberUser).enqueue(new Callback<BarberUser>() {
                 @Override
                 public void onResponse(Call<BarberUser> call, Response<BarberUser> response) {
-                    Toast.makeText(getContext(),"Changes saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Изменения сохранены",Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onFailure(Call<BarberUser> call, Throwable t) {
-                    Toast.makeText(getContext(),"Error! Changes not saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Ошибка, не было сохранено",Toast.LENGTH_SHORT).show();
                 }
             });
         }

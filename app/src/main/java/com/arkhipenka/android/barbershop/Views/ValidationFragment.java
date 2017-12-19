@@ -112,18 +112,18 @@ public class ValidationFragment extends Fragment {
                         progressBar.setVisibility(View.GONE);
                         if (response.body()!=null){
                             App.setAccessable(response.body());
-                            Toast.makeText(getContext(), "Welcome to account", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Добро пожаловать", Toast.LENGTH_SHORT).show();
                             getFragmentManager().popBackStack();
                         }
                         else {
-                            Toast.makeText(getContext(), "User with this login is already exist", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Пользователь с таким логином уже существует", Toast.LENGTH_SHORT).show();
                             passwordEditText.setText("");
                         }
                     }
 
                     @Override
                     public void onFailure(Call<BarberUser> call, Throwable t) {
-                        Toast.makeText(getContext(), "Connection error!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Ошибка!", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

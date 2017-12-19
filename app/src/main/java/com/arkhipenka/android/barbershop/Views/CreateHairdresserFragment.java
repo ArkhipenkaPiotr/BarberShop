@@ -65,12 +65,12 @@ public class CreateHairdresserFragment extends Fragment {
         App.getApi().addHairdresser(hairdresser).enqueue(new Callback<Hairdresser>() {
             @Override
             public void onResponse(Call<Hairdresser> call, Response<Hairdresser> response) {
-                Toast.makeText(getContext(),"Hairdresser was added", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Парикмахер добавлен", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<Hairdresser> call, Throwable t) {
-                Toast.makeText(getContext(),"Hairdresser was not added", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(),"Парикмахер не добавлен", Toast.LENGTH_LONG).show();
             }
         });
 
